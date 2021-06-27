@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no,shrink-to-fit=no" />
+
+		<link rel="stylesheet" type="text/css" href="style/main.css" />
+
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css" />
+		
+		<link rel="stylesheet" href="style/layx.min.css">
+
+		<title>APK包名工具</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="d-flex flex-wrap align-items-center justify-content-center centerBox">
+				<div class="card" style="background-color:rgba(255,255,255,0.5);width:88%;">
+					<div class="card-header">
+						<img src="images/android.png" />
+
+						<h2>APK包名工具</h2>
+					</div>
+					<div class="card-body">
+						<form>
+							<label for="oldPkgNameInput">在这输入原包名：</label>
+							<div class="input-group mb-3">
+								<input type="text" class="form-control" placeholder="原包名" id="oldPkgNameInput" />
+
+							</div>
+							<label for="newPkgNameInput">在这输入新包名：</label>
+							<div class="input-group mb-3 mt-3">
+								<input type="text" class="form-control" placeholder="新包名" id="newPkgNameInput" />
+
+							</div>
+							<label>上传apk文件：</label>
+							<br />
+
+							<button id="chooseFileBtn" type="button" class="btn btn-info btn-lg">选择文件</button>
+							<input id="chooseFileInput" type="file" style="display:none;" />
+
+							<span id="fileNameText">未选择文件</span>
+						</form>
+					</div>
+					<div class="card-footer">
+						<div id="progressBarBox" class="progress" style="margin-bottom:5px;">
+							<div id="uploadProgressBar" class="progress-bar" style="width:70%">正在解包</div>
+						</div>
+						<div class="d-flex flex-row">
+							<button id="submitBtn" class="btn btn-success btn-lg">提交并修改</button>
+							<button id="downloadBtn" class="btn btn-link">下载apk</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+		<script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+		<script src="script/layx.min.js"></script>
+		<script src="script/apktool.js"></script>
+	</body>
+</html>
